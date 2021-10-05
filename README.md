@@ -13,5 +13,5 @@ Starting off we need to install our lamp stack. We go with the easiest one which
 
 After your lamp stack is installed, run `sudo mysql_secure_installation` so you can configure mysql. Create a password and select a level. We suggest level 2 or 3. Press and Enter y for every single other question on the installation. After you get to the privilege tables question, your installation has been completed. Next you need to install phpmyadmin which will help you configure your database visually instead of typing out commands. Run `sudo apt-get install phpmyadmin` to install the graphical interface. Now move on to the section titled Aero Installation and Database.
 
-#### Aero Installation and Database
+### Aero Installation and Database
 Download this repo and unzip. Make sure your files are in the `htaccess` folder. Remove the file that ends with `.sql`. You will need that. Go into phpmyadmin by going into `http://[YOUR IP ADDRESS]/phpmyadmin/`. Create a database named `aerocms` and go into the import tab in the `aerocms` database. Press choose file and select the file that ends with `.sql`. Press go and the database will be filled with tables. You may get out of phpmyadmin and go to your website which is located at `http://[YOUR IP ADDRESS]/`. Your installation is completed!

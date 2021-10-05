@@ -5,6 +5,7 @@ Aero / AeroCMS is a simple and easy to use CMS (Content Management System) desig
 - PHP 5.6 - PHP 7.4
 - MySQL or MariaDB Database
 - Apache2 Server
+- If you have an XAMPP server, you have all of these requirements already.
 
 ## LAMP Installation
 You can run Aero on any operating system or architecture if it runs linux. You can do it on armhf (arm32), arm64 (aarch64), x86 (i386), or x86_64 (amd64). We recommend Debian or Ubuntu Linux since that is what we ran AeroCMS on. XAMPP also works too, it has everything included. Skip to Aero Installation and Database if you already configured your LAMP stack or have XAMPP.

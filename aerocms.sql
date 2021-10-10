@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 05, 2021 at 03:50 AM
+-- Generation Time: Oct 06, 2021 at 02:36 AM
 -- Server version: 8.0.26-0ubuntu0.20.04.3
 -- PHP Version: 7.4.3
 
@@ -38,7 +38,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
-(1, 'Default');
+(1, 'Default'),
+(2, 'test category');
 
 -- --------------------------------------------------------
 
@@ -73,15 +74,15 @@ CREATE TABLE `posts` (
   `post_id` int NOT NULL,
   `post_category_id` int NOT NULL,
   `post_title` varchar(255) NOT NULL,
-  `post_author` varchar(255) NOT NULL,
+  `post_author` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT '',
   `post_user` varchar(255) NOT NULL,
   `post_date` date NOT NULL,
   `post_image` text NOT NULL,
   `post_content` text NOT NULL,
   `post_tags` varchar(255) NOT NULL,
-  `post_comment_count` int NOT NULL,
+  `post_comment_count` int DEFAULT '0',
   `post_status` varchar(255) NOT NULL DEFAULT 'draft',
-  `post_views_count` int NOT NULL
+  `post_views_count` int DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -89,7 +90,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_user`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`, `post_views_count`) VALUES
-(1, 1, 'Your first post using AeroCMS!', '', 'Admin', '2021-10-05', 'belinda-fewings-6wAGwpsXHE0-unsplash.jpg', '<p>AeroCMS has been installed! Enjoy it! Login to the default admin account with these credentials!</p>\r\n<p>&nbsp;</p>\r\n<p>Username: admin</p>\r\n<p>&nbsp;</p>\r\n<p>Password: password</p>\r\n<p>&nbsp;</p>\r\n<p>With the admin account you can access the AeroCMS Admin Panel where you can edit your blog, create more users, give them permissions, create posts and more! We recommend that you create a new admin account because you cannot change user passwords! Anyway enjoy AeroCMS!</p>\r\n<p>&nbsp;</p>\r\n<p>Credits:</p>\r\n<p>&nbsp;</p>\r\n<p>Photo by Belinda Fewings on Unsplash</p>', 'aerocms, start guide, aero, cms, guide, user credentials, getting started', 0, 'published', 10);
+(1, 1, 'Your first post using AeroCMS!', '', 'admin', '2021-10-05', 'belinda-fewings-6wAGwpsXHE0-unsplash.jpg', '<p>AeroCMS has been installed! Enjoy it! Login to the default admin account with these credentials!</p>\r\n<p>&nbsp;</p>\r\n<p>Username: admin</p>\r\n<p>&nbsp;</p>\r\n<p>Password: password</p>\r\n<p>&nbsp;</p>\r\n<p>With the admin account you can access the AeroCMS Admin Panel where you can edit your blog, create more users, give them permissions, create posts and more! We recommend that you create a new admin account because you cannot change user passwords! Anyway enjoy AeroCMS!</p>\r\n<p>&nbsp;</p>\r\n<p>Credits:</p>\r\n<p>&nbsp;</p>\r\n<p>Photo by Belinda Fewings on Unsplash</p>', 'aerocms, start guide, aero, cms, guide, user credentials, getting started', 0, 'published', 11),
+(2, 2, 'php', '', 'admin', '2021-10-06', 'belinda-fewings-6wAGwpsXHE0-unsplash.jpg', '<p>hi, this is a test post</p>', 'hi, hello, welcome, good morning', 0, 'published', 0),
+(3, 1, 'mysql', '', 'admin', '2021-10-06', 'belinda-fewings-6wAGwpsXHE0-unsplash.jpg', '<p>AeroCMS is created with mysql database.</p>', 'mysql, database', 0, 'draft', 1);
 
 -- --------------------------------------------------------
 
@@ -153,7 +156,9 @@ INSERT INTO `users_online` (`id`, `session`, `time`) VALUES
 (18, '32hpoav8ksrhvi4qd7f5iisdh7', 1526395857),
 (19, 'b51ki4eoffu1a3suqagcjcb662', 1526441933),
 (20, '05t149k9ossbtvs3l0lb24u9up', 1633389690),
-(21, '5kavrpik2i0gl4cdskfif3c9gj', 1633405608);
+(21, '5kavrpik2i0gl4cdskfif3c9gj', 1633405608),
+(22, '6ek6d59pvjf8a8a5dr7b7ivu5r', 1633487781),
+(23, '56sf778beevhfl7c95mhtvs1km', 1633487237);
 
 --
 -- Indexes for dumped tables
@@ -197,7 +202,7 @@ ALTER TABLE `users_online`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cat_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `comments`
@@ -209,7 +214,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `post_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -221,7 +226,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users_online`
 --
 ALTER TABLE `users_online`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

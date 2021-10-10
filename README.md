@@ -16,3 +16,6 @@ After your lamp stack is installed, run `sudo mysql_secure_installation` so you 
 
 ### Aero Installation and Database
 Download this repo and unzip. Make sure your files are in the `htaccess` folder. Remove the file that ends with `.sql`. You will need that. Go into phpmyadmin by going into `http://[YOUR IP ADDRESS]/phpmyadmin/`. Create a database named `aerocms` and go into the import tab in the `aerocms` database. Press choose file and select the file that ends with `.sql`. Press go and the database will be filled with tables. You may get out of phpmyadmin and go to your website which is located at `http://[YOUR IP ADDRESS]/`. Your installation is completed!
+
+## Resources
+- Discord server - Join if you need any help with AeroCMS or anything else, or if you want to chill out and talk to some people. https://discord.gg/JXjyDYkNeA

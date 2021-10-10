@@ -69,8 +69,8 @@
                         <a href="./profile.php"><i class="fa fa-fw fa-file"></i> Profile</a>
                     </li>
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#users"><i class="fa fa-fw fa-arrows-v"></i> Site Settings <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="users" class="collapse">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#settings"><i class="fa fa-fw fa-arrows-v"></i> Site Settings <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="settings" class="collapse">
                             <li>
                                 <a href="./general-settings.php">General</a>
                             </li>

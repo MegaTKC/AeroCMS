@@ -1,4 +1,7 @@
-tinymce.init({ selector:'textarea' });
+tinymce.init({ 
+  selector: "textarea",
+  plugins: "wordcount"
+});
 
 $(document).ready(function(){
     $('#selectAllBoxes').click(function(event){

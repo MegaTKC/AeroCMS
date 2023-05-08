@@ -1,3 +1,5 @@
+# This project is not maintained anymore, I have been involved in other projects and forgot about this. I don't have plans coming back to this project currently, however I may do so in the future.
+
 # AeroCMS
 Aero / AeroCMS is a simple and easy to use CMS (Content Management System) designed to create fast and powerful web applications. Aero is built with OOP (Object Oriented Programming) PHP which is known for fast website loading speeds.
 
